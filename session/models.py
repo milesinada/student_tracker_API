@@ -23,6 +23,6 @@ class Session(models.Model):
     duration = models.CharField(max_length=32)
     unit = models.CharField(max_length=32)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default=FOLLOWUP)
-    student = models.ForeignKey(Student, related_name='students', on_delete=models.CASCADE)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
     def __str__(self):
         return self.issue
